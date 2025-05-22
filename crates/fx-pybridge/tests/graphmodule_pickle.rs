@@ -109,6 +109,4 @@ fn test_graphmodule_pickle_roundtrip() {
     assert!(fs::metadata(ORIG_PICKLE).is_ok());
     assert!(fs::metadata(ROUNDTRIP_PICKLE).is_ok());
     assert!(comparison_success, "GraphModules differ semantically after roundtrip");
-
-    cleanup_test_data();
 }
