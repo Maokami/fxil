@@ -1,0 +1,13 @@
+[package]
+name     = "fx-pybridge"
+version   = "0.1.0"
+edition   = "2024"
+publish   = false 
+
+[dependencies]
+anyhow     = { workspace = true }
+pyo3        = { version = "0.19.1", features = ["auto-initialize"] }
+torch-fx-rs = { workspace = true }
+
+[env]
+PYO3_PYTHON = { value = "${CARGO_MAKE_PYTHON?}", relative = false }
